@@ -13,7 +13,7 @@ const Form = props => {
 		const inputElements = [...formRef.current.querySelectorAll(".Form__input")]
 		const callToAction = formRef.current.querySelector(".callToAction")
 		const formValid = inputElements.every(input => {
-			return input.value.length >= 3
+			return input.value.length >= 2
 		})
 		formValid ? (callToAction.disabled = false) : (callToAction.disabled = true)
 	}

@@ -3,10 +3,10 @@ const content = {
 		title: "Regístrate con tus datos para ser parte del evento",
 		inputs: {
 			name: "Nombre",
-			bank: "Banca",
 			lastname: "Apellido",
-			role: "Cargo",
 			email: "Mail",
+			bank: "Banca",
+			role: "Cargo",
 			city: "Ciudad",
 		},
 		callToAction: "Regístrate",

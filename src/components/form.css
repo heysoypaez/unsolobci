@@ -1,5 +1,5 @@
 .Form {
-	background-color: #7D98AB;
+	background-color: #7C98AB;
 	padding: 6% 7%;
 	border-radius: 6px;
 	width: 100%;
@@ -46,12 +46,12 @@
 }
 
 .callToAction:disabled {
-	background-color: gray;
+	background-color: #50748A;
 	color: white;
 }
 
 .callToAction:disabled:hover {
-	background-color: gray;
+	background-color: #50748A;
 	cursor: not-allowed;
 }
 

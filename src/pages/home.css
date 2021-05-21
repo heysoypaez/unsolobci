@@ -16,7 +16,7 @@ main.Home__principal {
 
 img.logo {
 	width: 40vw;
-	max-width: 15rem;
+	max-width: 13.5rem;
 }
 
 figure.logoBci__container {
@@ -53,6 +53,7 @@ section.Home__eventdate p {
 	section.Home {
 		grid-row-gap: 2rem;
 		justify-items: center;
+		align-items: start;
 	}
 	figure.logoBci__container {
 		justify-self: center;

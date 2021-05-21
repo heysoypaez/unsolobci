@@ -15,7 +15,7 @@ const today = new Date().toLocaleString("en-US", {
   timeZone: "America/Santiago",
 })
 const todaySantiago = new Date(today)
-const EVENT_DATE = 21
+const EVENT_DATE = 25 
 
 export default function Home() {
   return (
