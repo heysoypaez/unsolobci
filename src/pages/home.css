@@ -1,0 +1,38 @@
+section.Home {
+	padding: 2rem 2rem;
+	display: grid;
+}
+
+header.Home__header {
+	display: flex;
+	align-items: flex-start;
+}
+
+main.Home__principal {
+	display: grid;
+	justify-content: center;
+	grid-row-gap: 1rem;
+}
+
+img.logo {
+	width: 40vw;
+	max-width: 15rem;
+}
+
+figure.logoBci__container {
+	display: flex;
+	justify-content: flex-end;
+	justify-self: end;
+}
+
+img.logoBci {
+	width: 30vw;
+	max-width: 10rem;
+	object-fit: contain;
+}
+
+@media screen and (max-width: 425px) {
+	section.Home {
+		grid-row-gap: 2rem;
+	}
+}

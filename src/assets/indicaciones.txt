@@ -1,0 +1,70 @@
+WEB 1
+1.Fondo: adjunto imagen se llama "Fondo 1"
+2.Estructura: usar la maqueda de guia para ordenar los elementos"
+3.Version movil: Pner todo los elementos hacia abajo partiendo por: logo un solo bci, logo bcxi y formulario.
+
+WEb 2
+1. Es lo mismo que la version "Web 1" pero hay que agregarle un texto arriba de la caja del formulario
+"Si ya estás inscrito para acceder a la transmisión debes hacer clic en el siguiente botón."
+Con el texto dle formulario "Transmisión". Usa las mismas caracteristicas del boton del formulario.
+¿cual es el link de ese boton? BCI lo va a poner.
+
+
+FORMULARIO
+1.Color base: #7D98AB
+
+2.Frase del formulario
+-Tipografia: Overpass semibold
+-Tamaño: no lo se pero segun la imagen creo que deberia ser entre 16 y 22px (lo dejo  atu criterio).
+-Color: #FFFFFF
+
+3.Texto campo de llenado
+-Tipografia: Overpass Regular
+-Color: #A8B6BE
+-Fondo: #FFFFFF
+-Tamaño: no lo se pero deberia ser un 30% mas pequeño que el de la frase  
+
+4.Boton
+-Tipografia: Overpass semibold
+-Tamaño: el mismo de la frase
+-Color: #A8B6BE
+-Fondo: #FFFFFF
+-Interaccion 1: Invertir los colores del texto con el fondo cuando se pase el mouse
+
+5.Otros 
+-Envio del formulario: cuando se envie el formulario exitosamente debe aparecer un texto adentro de la caja
+con la misma tipografia del boton pero con color #FFFFFF que diga
+"Tu registro se ha realizado con éxito, recibirás un correo de confirmación".
+-Todo los campos del formulario son obligatorios, en el caso de que envien sin completar poner texto con la misma
+tipografia del boton pero con color #FFFFFF que diga "Debes llenar todo los campos".
+-Cuando se completa el formulario exitosamente le debe llegar un correo a la persona con la siguiente informacion
+que detallo abajo en "Email de registro.
+
+6.Email de registro
+-El email que hace los envios es "contacto@unsolobci.cl"
+-Cuando se completa el formulario con exito, le debe llegar un correo con las siguientes caracteristicas:
+Asunto: Confirmación para conectarte como Un Solo Bci
+Mensaje: Poner imagen que adjunto que se llama "email.png"
+
+7.Pegar etiqueta de google analytics en el header
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2HHQHDL6R3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2HHQHDL6R3');
+</script>
+
+
+
+
+
+
+
+
+
+
+

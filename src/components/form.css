@@ -1,0 +1,56 @@
+.Form {
+	background-color: #7D98AB;
+	padding: 6% 7%;
+	border-radius: 6px;
+	width: 100%;
+	max-width: 60rem;
+	display: grid;
+	grid-row-gap: 2.5rem;
+	justify-self: center;
+	box-sizing: border-box;
+}
+
+.Form__title {
+	color: white;
+}
+
+.Form__inputs {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem 1rem;
+}
+
+.Form__inputs input {
+	min-height: 2rem;
+	border-radius: 6px;
+	border: 0;
+	padding: 0 1rem;
+}
+
+.Form__inputs input,
+.Form__inputs input::placeholder {
+	color: #A8B6BE;
+	font-weight: 600;
+}
+
+.callToAction {
+	background-color: white;
+	border-radius:6px;
+	border: 0;
+	min-height: 2rem;
+	color: #A8B6BE;
+	font-size: 1.2rem;
+	font-weight: 600;
+	padding: 0.6rem 2rem;
+	justify-self: end;
+}
+
+/*Mobile version
+--------------------*/
+@media screen and (max-width: 425px) {
+
+	.Form__inputs {
+		grid-template-columns: 1fr;
+	}
+}
+
