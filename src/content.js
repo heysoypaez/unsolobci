@@ -10,8 +10,17 @@ const content = {
 			city: "Ciudad",
 		},
 		callToAction: "Regístrate",
-		success: "Tu registro se ha realizado con éxito, recibirás un correo de confirmación."
-	}
+		success:
+			"Tu registro se ha realizado con éxito, recibirás un correo de confirmación.",
+	},
+	home: {
+		event: {
+			registered:
+				"Si ya estás inscrito para acceder a la transmisión debes hacer clic en el siguiente botón.",
+			unregistered: "Si aun no estás inscrito, regístrate aquí.",
+			callToAction: "Transmisión",
+		},
+	},
 }
 
 export default content
