@@ -8,10 +8,12 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "G-2HHQHDL6R3",
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-2HHQHDL6R3", // Google Analytics / GA
+        ],
       },
     },
   ],
