@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && zip -r dist.zip public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "gatsby": "^3.4.1",
+    "gatsby-plugin-google-analytics": "^3.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },

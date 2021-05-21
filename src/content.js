@@ -9,7 +9,8 @@ const content = {
 			email: "Mail",
 			city: "Ciudad",
 		},
-		callToAction: "Regístrate"
+		callToAction: "Regístrate",
+		success: "Tu registro se ha realizado con éxito, recibirás un correo de confirmación."
 	}
 }
 

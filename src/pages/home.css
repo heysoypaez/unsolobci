@@ -34,5 +34,9 @@ img.logoBci {
 @media screen and (max-width: 425px) {
 	section.Home {
 		grid-row-gap: 2rem;
+		justify-items: center;
+	}
+	figure.logoBci__container {
+		justify-self: center;
 	}
 }

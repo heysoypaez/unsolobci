@@ -45,6 +45,27 @@
 	justify-self: end;
 }
 
+.callToAction:disabled {
+	background-color: gray;
+	color: white;
+}
+
+.callToAction:disabled:hover {
+	background-color: gray;
+	cursor: not-allowed;
+}
+
+.callToAction:hover {
+	color: white;	
+	background-color: #A8B6BE;
+	cursor: pointer;
+}
+
+.Form__success {
+	color: white;
+	transition: 1s;
+}
+
 /*Mobile version
 --------------------*/
 @media screen and (max-width: 425px) {

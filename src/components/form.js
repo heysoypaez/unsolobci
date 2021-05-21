@@ -1,36 +1,69 @@
-import React from "react"
+import React, { useRef, useState } from "react"
 import content from "../content"
 import "./form.css"
 
 const {
-	form: { title, inputs, callToAction },
+	form: { title, inputs, callToAction, success },
 } = content
 
 const Form = props => {
-	const inputsList = Object.entries(inputs)
+	const formRef = useRef(null)
+	const [submitted, setSubmitted] = useState(Boolean(sessionStorage.getItem("bci-submitted")))
+	const handleFormChange = event => {
+		const inputElements = [...formRef.current.querySelectorAll(".Form__input")]
+		const callToAction = formRef.current.querySelector(".callToAction")
+		const formValid = inputElements.every(input => {
+			return input.value.length >= 3
+		})
+		formValid ? (callToAction.disabled = false) : (callToAction.disabled = true)
+	}
+	const handleSubmit = event => {
+		setSubmitted(true)
+		sessionStorage.setItem("bci-submitted",true)
+	}
+	
 	return (
 		<form
 			className="Form"
 			action="https://formkeep.com/f/c3f6e92c7bcd"
-			accept-charset="UTF-8"
-			enctype="multipart/form-data"
+			acceptCharset="UTF-8"
+			encType="multipart/form-data"
 			method="POST"
+			ref={formRef}
+			onChange={handleFormChange}
+			onSubmit={handleSubmit}
 		>
 			<h2 className="Form__title">{title}</h2>
 			<section className="Form__inputs">
-				{inputsList.map(input => {
-
+				{Object.entries(inputs).map(input => {
 					const [name, value] = input
-					return <input 
-						type="text" 
-						placeholder={value} 
-						title={value}
-						id={name}
-						name={value.toLowerCase()}
-					/>					
+					const type = name === "email" ? "email" : "text"
+					return (
+						<input
+							className="Form__input"
+							key={name}
+							type={type}
+							placeholder={value}
+							title={value}
+							id={name}
+							name={name}
+							required={true}
+						/>
+					)
 				})}
 			</section>
-			<input type="submit" value={callToAction} className="callToAction" />
+			<input
+				type="submit"
+				value={callToAction}
+				className="callToAction"
+				disabled
+			/>
+			{ submitted && (
+					<section className="Form__success">
+						<p>{success}</p>
+					</section>
+				)
+			}
 		</form>
 	)
 }
