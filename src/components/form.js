@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import content from "../content"
 import "./form.css"
 
@@ -8,7 +8,7 @@ const {
 
 const Form = props => {
 	const formRef = useRef(null)
-	const [submitted, setSubmitted] = useState(Boolean(sessionStorage.getItem("bci-submitted")))
+	const [submitted, setSubmitted] = useState(false)
 	const handleFormChange = event => {
 		const inputElements = [...formRef.current.querySelectorAll(".Form__input")]
 		const callToAction = formRef.current.querySelector(".callToAction")
@@ -17,11 +17,15 @@ const Form = props => {
 		})
 		formValid ? (callToAction.disabled = false) : (callToAction.disabled = true)
 	}
-	const handleSubmit = event => {
-		setSubmitted(true)
-		sessionStorage.setItem("bci-submitted",true)
-	}
+	const handleSubmit = event => setSubmitted(true)
 	
+	useEffect(()=>{
+		setSubmitted(Boolean(sessionStorage.getItem("bci-submitted")))
+	},[])
+	useEffect(() => {
+		submitted && sessionStorage.setItem("bci-submitted", true)
+	}, [submitted])
+
 	return (
 		<form
 			className="Form"
@@ -58,12 +62,11 @@ const Form = props => {
 				className="callToAction"
 				disabled
 			/>
-			{ submitted && (
-					<section className="Form__success">
-						<p>{success}</p>
-					</section>
-				)
-			}
+			{submitted && (
+				<section className="Form__success">
+					<p>{success}</p>
+				</section>
+			)}
 		</form>
 	)
 }

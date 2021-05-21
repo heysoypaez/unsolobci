@@ -22,7 +22,7 @@ img.logo {
 figure.logoBci__container {
 	display: flex;
 	justify-content: flex-end;
-	justify-self: end;
+	justify-self: end; 
 }
 
 img.logoBci {
