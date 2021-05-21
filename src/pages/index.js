@@ -6,6 +6,8 @@ import content from "../content"
 import "./index.css"
 import "./home.css"
 
+console.log(".")
+
 const {
   home: {
     event: { registered, unregistered, callToAction },
