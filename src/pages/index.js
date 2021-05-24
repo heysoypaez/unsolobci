@@ -6,8 +6,6 @@ import content from "../content"
 import "./index.css"
 import "./home.css"
 
-console.log(".")
-
 const {
   home: {
     event: { registered, unregistered, callToAction },
@@ -17,30 +15,29 @@ const today = new Date().toLocaleString("en-US", {
   timeZone: "America/Santiago",
 })
 const todaySantiago = new Date(today)
-const EVENT_DATE = 25 
+const EVENT_DATE = 25
+const eventDateClassName =
+  todaySantiago.getDate() === EVENT_DATE ? "eventdate" : ""
 
 export default function Home() {
   return (
-    <section className="Home">
+    <section className={`Home ${eventDateClassName}`}>
       <header className="Home__header">
         <img src={logo} alt="logo solo bci" className="logo" />
-        {todaySantiago.getDate() === EVENT_DATE && (
-          <section className="Home__eventdate">
-            <p>{registered}</p>
-            <input
-              type="submit"
-              value={callToAction}
-              className="callToAction"
-            />
-            <p>{unregistered}</p>
-          </section>
-        )}
-        <div></div>
       </header>
       <main className="Home__principal">
         <figure className="logoBci__container">
           <img src={logoBci} alt="logo bci" className="logoBci" />
         </figure>
+        {todaySantiago.getDate() === EVENT_DATE && (
+          <section className="Home__eventdate">
+            <p>{registered}</p>
+            <a className="callToAction transmision" href="/transmision">
+              {callToAction}
+            </a>
+            <p>{unregistered}</p>
+          </section>
+        )}
         <Form />
       </main>
     </section>

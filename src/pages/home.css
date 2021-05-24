@@ -2,6 +2,9 @@ section.Home {
 	padding: 2rem 2rem;
 	display: grid;
 }
+section.Home.eventdate {
+	grid-template-columns: 1fr 4fr 1fr;	
+}
 
 header.Home__header {
 	display: flex;
@@ -24,6 +27,9 @@ figure.logoBci__container {
 	justify-content: flex-end;
 	justify-self: end;
 }
+.eventdate figure.logoBci__container {
+	justify-self: center;	
+}
 
 img.logoBci {
 	width: 30vw;
@@ -42,6 +48,15 @@ section.Home__eventdate {
 
 section.Home__eventdate .callToAction {
 	justify-self: center;
+	background: #50748A;
+	color: white;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	padding: 0.6rem 2rem;
+	padding-bottom: 0.3rem;
+	font-weight: 800;	
+	line-height: 1;
 }
 
 section.Home__eventdate p {
@@ -54,6 +69,9 @@ section.Home__eventdate p {
 		grid-row-gap: 2rem;
 		justify-items: center;
 		align-items: start;
+	}
+	section.Home.eventdate {
+		grid-template-columns: 1fr;	
 	}
 	figure.logoBci__container {
 		justify-self: center;

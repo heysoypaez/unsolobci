@@ -34,13 +34,14 @@
 }
 
 .callToAction {
+	font-family: 'Overpass', sans-serif;
 	background-color: white;
 	border-radius:6px;
 	border: 0;
 	min-height: 2rem;
 	color: #A8B6BE;
 	font-size: 1.2rem;
-	font-weight: 600;
+	font-weight: 700;
 	padding: 0.6rem 2rem;
 	justify-self: end;
 }
