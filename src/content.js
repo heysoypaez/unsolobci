@@ -5,13 +5,15 @@ const content = {
 			name: "Nombre",
 			lastname: "Apellido",
 			email: "Mail",
-			bank: "Banca",
+			bank: "Gerencia",
 			role: "Cargo",
 			city: "Ciudad",
 		},
 		callToAction: "Regístrate",
-		success:
+		success: [
 			"Tu registro se ha realizado con éxito, recibirás un correo de confirmación.",
+			"(Revisa tu bandeja de spam)",
+		],
 	},
 	home: {
 		event: {

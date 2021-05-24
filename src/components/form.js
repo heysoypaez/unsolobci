@@ -64,7 +64,8 @@ const Form = props => {
 			/>
 			{submitted && (
 				<section className="Form__success">
-					<p>{success}</p>
+					<p>{success[0]}</p>
+					<p><i>{success[1]}</i></p>
 				</section>
 			)}
 		</form>
