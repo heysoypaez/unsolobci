@@ -15,7 +15,7 @@ const today = new Date().toLocaleString("en-US", {
   timeZone: "America/Santiago",
 })
 const todaySantiago = new Date(today)
-const EVENT_DATE = 23
+const EVENT_DATE = 25
 const eventDateClassName =
   todaySantiago.getDate() === EVENT_DATE ? "eventdate" : ""
 
