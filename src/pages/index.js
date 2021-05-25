@@ -32,7 +32,7 @@ export default function Home() {
         {todaySantiago.getDate() === EVENT_DATE && (
           <section className="Home__eventdate">
             <p>{registered}</p>
-            <a className="callToAction transmision" href="/transmision">
+            <a className="callToAction transmision" href="/live">
               {callToAction}
             </a>
             <p>{unregistered}</p>
